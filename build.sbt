@@ -15,7 +15,12 @@ libraryDependencies ++= Seq(
   "org.scalanlp" %% "breeze" % "1.0",
   "org.scalanlp" %% "breeze-natives" % "1.0",
   "org.scalanlp" %% "breeze-viz" % "1.0",
-  "com.cibo" %% "evilplot" % "0.8.0"
+  "io.circe" %% "circe-core" % "0.14.0-M1",
+  "io.circe" %% "circe-generic" % "0.14.0-M1",
+  "io.circe" %% "circe-parser" % "0.14.0-M1",
+  "com.cibo" %% "evilplot" % "0.8.0",
+  "com.cibo" %% "evilplot-repl" % "0.8.0",
+  "com.cibo" %% "evilplot-jupyter-scala" % "0.8.0"
 )
 
 resolvers ++= Seq(
