@@ -20,7 +20,8 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-parser" % "0.14.0-M1",
   "com.cibo" %% "evilplot" % "0.8.0",
   "com.cibo" %% "evilplot-repl" % "0.8.0",
-  "com.cibo" %% "evilplot-jupyter-scala" % "0.8.0"
+  // "com.cibo" %% "evilplot-jupyter-scala" % "0.8.0"
+  "org.scalatest" %% "scalatest" % "3.3.0-SNAP2" % Test
 )
 
 resolvers ++= Seq(
