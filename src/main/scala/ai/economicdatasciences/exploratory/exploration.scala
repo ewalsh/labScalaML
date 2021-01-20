@@ -9,9 +9,12 @@ import scala.collection.mutable.MutableList
 
 import com.cibo.evilplot.displayPlot
 import com.cibo.evilplot.plot._
+import com.cibo.evilplot.plot.renderers.PointRenderer
 import com.cibo.evilplot.plot.aesthetics.DefaultTheme._
 import com.cibo.evilplot.numeric.Point
 import com.cibo.evilplot.geometry.Drawable
+
+case class CatPoint(category: String, pt: Point)
 
 object Exploration extends App {
   // read lines
@@ -40,9 +43,10 @@ object Exploration extends App {
   println(s"maximum: ${breeze.linalg.max(output)}")
 
   val pdata = Seq.tabulate(100) { i =>
-    Point(i.toDouble, scala.util.Random.nextDouble())
+    val pt = Point(i.toDouble, scala.util.Random.nextDouble())
+    CatPoint("test", pt)
   }
-  val plot = ScatterPlot(pdata).xAxis().yAxis().frame().xLabel("x").yLabel("y").render()
+  val plot = ScatterPlot(pdata.map(_.pt)).xAxis().yAxis().frame().xLabel("x").yLabel("y").render()
   //.write(new File("plots/plot.png"))
   // display
   // displayPlot(plot)
