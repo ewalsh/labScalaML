@@ -25,6 +25,12 @@ import com.cibo.evilplot.plot.aesthetics.Elements
 import org.jfree.chart.encoders.EncoderUtil
 import org.apache.commons.codec.binary.Base64
 
+// import d3v4._
+//
+// import scala.scalajs.js
+
+// import plotly._, element._, layout._, Plotly._
+
 object CiboExamples {
   // plot to html img tag
   def ciboToHtml(plt: Drawable, divWidth: String = "33%", divHeight: String = "33%"): String = {
@@ -136,4 +142,59 @@ object CiboExamples {
   // ScatterPlot(data, pointRenderer = Some(PointRenderer.colorByCategory(data, { x: MyFancyData =>
   //   x.quality
   // })))
+// }
+
+// object PlotlyExamples {
+//   // plotly example
+//   val x = (0 to 100).map(_ * 0.1)
+//   val y1 = x.map(d => 2.0 * d + util.Random.nextGaussian())
+//   val y2 = x.map(math.exp)
+//
+//   val plot = Seq(
+//     Scatter(x, y1).withName("Approx twice"),
+//     Scatter(x, y2).withName("Exp")
+//   )
+//
+//   val lay = Layout().withTitle("Curves")
+//   plot.plot("plot", lay)  // attaches to div element with id 'plot'
+// }
+
+// object ScalaJSExample extends js.JSApp {
+//
+//   def main(): Unit = {
+//     /**
+//       * Adapted from http://thecodingtutorials.blogspot.ch/2012/07/introduction-to-d3.html
+//       */
+//     val graphHeight = 450
+//
+//     //The width of each bar.
+//     val barWidth = 80
+//
+//     //The distance between each bar.
+//     val barSeparation = 10
+//
+//     //The maximum value of the data.
+//     val maxData = 50
+//
+//     //The actual horizontal distance from drawing one bar rectangle to drawing the next.
+//     val horizontalBarDistance = barWidth + barSeparation
+//
+//     //The value to multiply each bar's value by to get its height.
+//     val barHeightMultiplier = graphHeight / maxData;
+//
+//     //Color for start
+//     val c = d3 //.rgb("DarkSlateBlue")
+//
+//     val rectXFun = (d: Int, i: Int) => i * horizontalBarDistance
+//     val rectYFun = (d: Int) => graphHeight - d * barHeightMultiplier
+//     val rectHeightFun = (d: Int) => d * barHeightMultiplier
+//     val rectColorFun = (d: Int, i: Int) => c.brighter(i * 0.5).toString
+//
+//     val svg = d3.select("body").append("svg").attr("width", "100%").attr("height", "450px")
+//     val sel = svg.selectAll("rect").data(js.Array(8, 22, 31, 36, 48, 17, 25))
+//     sel.enter().append("rect").attr("x", rectXFun).attr("y", rectYFun).attr("width", barWidth).attr("height", rectHeightFun).style("fill", rectColorFun)
+//
+//
+//   }
+
 }

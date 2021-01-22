@@ -14,6 +14,11 @@ import com.cibo.evilplot.plot.aesthetics.DefaultTheme._
 import com.cibo.evilplot.numeric.Point
 import com.cibo.evilplot.geometry.Drawable
 
+// import plotly._, element._, layout._, Plotly._
+// import org.singlespaced.d3js.Ops._
+// import org.singlespaced.d3js.d3
+
+
 case class CatPoint(category: String, pt: Point)
 
 object Exploration extends App {
@@ -64,11 +69,8 @@ object Exploration extends App {
   val ys = dm(::,13)  //.toArray.toSeq
 
   println(ys)
- // f.subplot(0)
-
-  //f.subplot(0) += hist(ys,10)
-
-
+  f.subplot(0)
+  f.subplot(0) += hist(ys,10)
 
   val subplots = for (i <- 0 to 3; j <- 0 to 3)
   yield { f.subplot(4, 4, i + 4 * j)  }
