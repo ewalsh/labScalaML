@@ -1,3 +1,5 @@
+package ai.economicdatasciences.explore
+
 import breeze.plot._
 import breeze.linalg._
 import breeze.numerics._
@@ -72,11 +74,10 @@ object Exploration extends App {
   f.subplot(0)
   f.subplot(0) += hist(ys,10)
 
-  val subplots = for (i <- 0 to 3; j <- 0 to 3)
-  yield { f.subplot(4, 4, i + 4 * j)  }
+  val subplots = for (i <- 0 to 3; j <- 0 to 3) yield { f.subplot(4, 4, i + 4 * j)  }
 
 
-  for (i <- 0 to 12; j <- 0 to 3) {
+  for (i <- 1 to 12; j <- 0 to 3) {
     // val xs = for (x <- fr.colAt(i).toSeq) yield { x._2 }
     val xs = dm(::, i)
     val p = subplots(i)
