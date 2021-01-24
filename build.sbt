@@ -22,6 +22,7 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-parser" % "0.14.0-M1",
   "com.cibo" %% "evilplot" % "0.8.0",
   "com.cibo" %% "evilplot-repl" % "0.8.0",
+  "com.github.fommil.netlib" % "all" % "1.1.2" pomOnly(),
   // "com.github.fdietze.scala-js-d3v4" %%% "scala-js-d3v4" % "809f086",
   // "org.singlespaced" %%% "scalajs-d3_sjs0.6_2.12" % "0.3.4",
   // "org.plotly-scala" %% "plotly-render" % "0.8.1",
